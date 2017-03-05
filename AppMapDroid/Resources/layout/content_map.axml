@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/pick_location_but"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center|bottom"
+        android:background="@mipmap/pick_location_but" />
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pick_location_but"
+        android:name="com.google.android.gms.maps.MapFragment" />
+  </RelativeLayout>
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="70dp">
+    <android.support.v7.widget.CardView
+       android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="13dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp">
+
+      <Button
+            android:id="@+id/menu_but"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/menu_but"
+            android:layout_marginLeft="0dp" />
+
+      <fragment
+          android:id="@+id/place_autocomplete_fragment"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="50dp"
+          android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment" />
+    </android.support.v7.widget.CardView>
+
+  </android.support.v7.widget.Toolbar>
+  <android.support.v4.view.ViewPager
+      android:id="@+id/viewpager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout>

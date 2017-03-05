@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true"
+     
+    android:background="#000000"
+    android:alpha="0.8"
+    android:weightSum="100">
+  <TextView
+      android:id="@+id/taxi_find_txt"
+      android:text="Un taxi a été trouver"
+      android:layout_width="match_parent"
+      android:layout_marginTop="50dp"
+      android:layout_height="0dp"
+      android:gravity="center"
+      android:textColor="@color/splash_background"
+      android:layout_weight="10"
+      android:textStyle="normal"
+      android:textSize="25sp" />
+  <TextView
+       android:id="@+id/info_taxi_txt"
+       android:text="Mob1Taxi Mercedes classe E IMAT-BL-330-AB "
+       android:layout_width="match_parent"
+       android:inputType="textMultiLine"
+       android:layout_height="0dp"
+       android:gravity="center"
+       android:textColor="#75C043"
+       android:layout_weight="15"
+       android:textStyle="normal"
+       android:textSize="20sp" />
+  <TextView
+      android:id="@+id/merci_txt"
+      android:text="Vous avez 20 secondes"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="5"
+      android:textColor="@color/splash_background"
+      android:gravity="center"
+      android:textStyle="normal"
+      android:textSize="20sp"
+      android:textAllCaps="true"/>
+  <TextView
+      android:id="@+id/confirm_txt"
+      android:text="pour confirmer la course"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:gravity="center"
+      android:layout_weight="5"
+      android:textColor="@color/splash_background"
+      android:textStyle="normal"
+      android:textSize="20sp"
+      android:textAllCaps="true" />
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="30dp"
+      android:layout_weight="45">
+    <ProgressBar
+        android:id="@+id/progress_delai_accept"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:indeterminate="true" />
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="20">
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/cancel_booking_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        android:src="@android:drawable/ic_dialog_alert"
+        app:backgroundTint="#FF0000" />
+  </RelativeLayout>
+</LinearLayout>

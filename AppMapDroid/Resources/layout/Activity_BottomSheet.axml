@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="true"
+    
+    tools:context="com.support.android.designlibdemo.BottomSheetActivity">
+  <fragment
+      android:id="@+id/map"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:name="com.google.android.gms.maps.MapFragment" />
+  <LinearLayout
+      android:id="@+id/bottom_sheet"
+      android:background="@android:color/white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="16dp"
+      app:layout_behavior="@string/bottom_sheet_behavior">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info du taxi!"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+      <android.support.v4.view.ViewPager
+          android:id="@+id/viewpager"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="350dp"
+          android:layout_alignParentBottom="true"
+          android:layout_centerVertical="true"
+          android:background="@android:color/white">
+        <LinearLayout
+            android:id="@+id/time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:background="@color/login_background">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="90dp"
+              android:textColor="@color/material_grey_600"
+              android:textSize="@dimen/abc_text_size_small_material"
+              android:text="@string/time_arrived" />
+          <TextView
+              android:id="@+id/time_txt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:textColor="@color/material_grey_600"
+              android:textSize="@dimen/abc_text_size_small_material"
+              android:text="12:50" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_below="@id/time_layout"
+            android:layout_height="200dp">
+          <Button
+              android:id="@+id/call_but"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_marginLeft="40dp"
+              android:layout_marginTop="50dp"
+              android:layout_alignParentLeft="true"
+              android:background="@mipmap/call_but" />
+          <Button
+              android:id="@+id/message_but"
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:layout_marginRight="40dp"
+              android:layout_marginTop="50dp"
+              android:layout_alignParentRight="true"
+              android:background="@mipmap/message_but" />
+          <LinearLayout
+              android:layout_toRightOf="@id/call_but"
+              android:layout_toLeftOf="@id/message_but"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+              <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:src="@mipmap/avatar"
+                  android:id="@+id/avatar_img" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/name_txt"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/material_grey_800"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:gravity="center"
+                android:text="Goerge" />
+            <TextView
+                android:id="@+id/address_txt"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/material_grey_300"
+                android:textSize="@dimen/abc_text_size_small_material"
+                android:gravity="center"
+                android:text="XY-356" />
+          </LinearLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/cancel_ride_but"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_layout"
+            android:background="@mipmap/cancel_ride_but" />
+      </RelativeLayout>
+    </FrameLayout>
+  </LinearLayout>
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/fab"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/fab_margin"
+      android:src="@android:drawable/ic_dialog_map"
+      app:layout_anchor="@id/bottom_sheet"
+      app:layout_anchorGravity="top|right|end" />
+</android.support.design.widget.CoordinatorLayout>

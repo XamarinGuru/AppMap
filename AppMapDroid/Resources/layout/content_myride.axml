@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.support.android.designlibdemo.MyRideActivity">
+  <fragment
+      android:id="@+id/map"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:name="com.google.android.gms.maps.MapFragment" />
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+  <android.support.v4.view.ViewPager
+      android:id="@+id/viewpager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+  <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/search_card_bg"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp">
+    <RelativeLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+      <Button
+          android:layout_width="50dp"
+          android:layout_height="match_parent"
+          android:background="@mipmap/menu_but"
+          android:id="@+id/menu_but"
+          android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+  </RelativeLayout>
+
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/fab"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end|bottom"
+      android:layout_margin="@dimen/fab_margin" />
+
+</android.support.design.widget.CoordinatorLayout>

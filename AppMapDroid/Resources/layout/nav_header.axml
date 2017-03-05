@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+  <ImageView
+      android:id="@+id/imgViewHeader"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@mipmap/ic_master_header"
+      android:scaleType="centerCrop" />
+  <TextView
+      android:id="@+id/username"
+      android:text="bertrand"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#FFFFFF"
+      android:layout_gravity="left"
+      android:textStyle="bold"
+      android:layout_marginTop="140dp"
+      android:layout_marginStart="20dp" />
+  <TextView
+      android:id="@+id/email_view"
+      android:text="bertrand@gmai.com"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#FFFFFF"
+      android:textStyle="normal"
+      android:layout_marginTop="160dp"
+      android:layout_marginStart="20dp" />
+</FrameLayout>

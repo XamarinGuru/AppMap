@@ -1,0 +1,44 @@
+<resources>
+  <style name="MyTheme.Base" parent="Theme.AppCompat.Light"></style>
+  <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo">
+ </style>
+  <style name="Theme.DesignDemo2" parent="Base.Theme.DesignDemo">
+ </style>
+  <!--<style  Theme page map_activity, pick_activity, my_ride_activity ect.. "/>-->
+  <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">#75C043</item><!--<COLORS VERT PRIMAIRE DE L'APPLICATION"/>-->
+    <item name="colorPrimaryDark">#75C043</item><!--<COLORS DE LA BARE DE NOTIFICATION"/>-->   
+    <item name="colorAccent">#FF0000</item><!--<COLORS SECONDAIRE DES BOUTON LIGNE DE L'APPLICATION "/>-->
+    <item name="android:windowTranslucentStatus">true</item>
+    <!--<item name="android:windowTranslucentNavigation">true</item>-->
+  </style>
+  <!--<style  Theme page "/>-->
+  <style name="Widget.CardContent" parent="android:Widget">
+    <item name="android:paddingLeft">16dp</item>
+    <item name="android:paddingRight">16dp</item>
+    <item name="android:paddingTop">24dp</item>
+    <item name="android:paddingBottom">24dp</item>
+    <item name="android:orientation">vertical</item>
+  </style>
+
+  <!--<style name="Theme.DesignDemo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.NoActionBar"/>-->
+  <style name="Theme.DesignDemo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+ 
+  <!--<style  Theme page splash screnn"/>-->
+	  <style name="MyTheme" parent="MyTheme.Base"></style>
+  	<style name="MyTheme.Splash" parent ="Theme.AppCompat.Light">
+    	<item name="android:windowBackground">@drawable/splash_screen</item>
+    	<item name="android:windowNoTitle">true</item>  
+  	</style>
+  
+  <!--<style  Theme page searchtaxiactivity"/>-->
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+      <item name="android:windowIsTranslucent">true</item>
+      <item name="android:windowBackground">@android:color/transparent</item>
+      <item name="android:windowContentOverlay">@null</item>
+      <item name="android:windowNoTitle">true</item>
+      <item name="android:windowIsFloating">false</item> <!--<laisse une bordure de chaque cotes de 5mn"/>-->
+      <item name="android:backgroundDimEnabled">false</item>
+    </style>
+  
+</resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "647985738537",
+    "firebase_url": "https://gmap-151917.firebaseio.com",
+    "project_id": "gmap-151917",
+    "storage_bucket": "gmap-151917.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647985738537:android:618097eb35a52170",
+        "android_client_info": {
+          "package_name": "AppMapDroid.AppMapDroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647985738537-6971oepggasohqn2plgnvhqhmmf4rmbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcR5JscfkFa8V_BrDbxXb7S_WbP9-6HEs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
